@@ -7,6 +7,9 @@
 RewriteEngine On
 RewriteBase /arihant_about-me/
 RewriteRule ^index\.php$ - [L]
+RewriteRule ^ajar/?$ /arihant_about-me/wp-login.php [QSA,L]
+RewriteRule ^ajar/register/?$ /arihant_about-me/wp-login.php?action=register [QSA,L]
+RewriteRule ^ajar/lostpassword/?$ /arihant_about-me/wp-login.php?action=lostpassword [QSA,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /arihant_about-me/index.php [L]
